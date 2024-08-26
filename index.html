@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="tailwind.js"></script>
+  <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+
+ .container {
+   background-color: white;
+   height: 50px;
+   width: 100rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+ }
+ .logo {
+   right: 10px;
+   margin: auto;
+   position: fixed;
+   cursor: pointer;
+ }
+ .ic {
+   height: 40px;
+   width: 40px;
+ }
+ .logo-right {
+   position: fixed;
+   color: white;
+   font-size: 25px;
+   font-family: zilla slab;
+   left: 5px;
+   display: flex;
+   align-items: center;
+   color:#5097A4;
+ }
+ .per {
+   position: fixed;
+   left: 40px;
+   font-weight: bold;
+ }
+ .hub {
+   position: fixed;
+   right: 0;
+   margin: 0 70px 0 0;
+   border: 1px solid transparent;
+   padding: 0 5px 0 5px;
+   background-color: #5097A4;
+   font-weight: bold;
+   color: white;
+ }
+ .hub:hover {
+   background-color: black;
+   color: white;
+ }
+ #check {
+   position: fixed;
+   right: 0;
+   margin: 0 15px 0 0;
+   height: 20px;
+   width: 20px;
+   z-index: 6;
+   top: 10px;
+   opacity: 0;
+ }
+ li{
+ position: relative;
+ top:50px;
+ color: white;
+ width: 800px;
+   padding: 15px 0 15px 0;
+ font-size: 15px;
+ font-family: zilla slab;
+ font-weight: bold;
+border-bottom: 0.1px solid black;
+background-color:#5097A4;
+z-index: 1;
+ }
+ #check:checked +
+.con-log {
+top: 5%;
+z-index: 3;
+position: relative;
+}
+.con-log {
+  top: -100%;
+  transition: 2s;
+  position: fixed;
+}
+ul {
+  position: fixed;
+}
+.desk {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  height: 430px;
+ /* padding: 100px 100px 100px 100px;*/
+  background-color:#5097A4;
+  box-shadow: 2px 2px 2px grey;
+  display: grid;
+  justify-content: center;
+}
+.nat { 
+  margin: 80px 0 0 0;
+}
+.con-two {
+  display: flex;
+  justify-content: center;
+  font-family: zilla slab;
+  color: white;
+}
+.batu {
+  font-size: 20px:
+  font-family: zilla slab;
+  margin: 80px 0 0 0;
+  z-index: 1;
+  position: relative;
+}
+.log{
+  height: 300px;
+  width: 300px;
+  border-radius:5px;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-top: 5px;
+    display: grid;
+    justify-content: center;
+    margin: 370px 0 0 0;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.con-tree{
+  font-family: Courier;
+  margin: 50px 0 0 0;
+ font-size: 15px;
+ display: grid;
+ justify-content: center;
+}
+p:nth-child(2) {
+  color:#5097A4;
+ justify-content: center;
+ display: grid;
+ font-size: 20px;
+ font-weight: bold;
+}
+p:nth-child(1) {
+  display: grid;
+  justify-content: center;
+  font-weight: bold;
+}
+p:nth-child(3) {
+  justify-content: center;
+  display: grid;
+  font-weight: bold;
+  padding: 0 20px 0 20px;
+}
+p:nth-child(4) {
+  font-weight: bold;
+  justify-content: center;
+  display: grid;
+  color:#5097A4;
+}
+p:nth-child(5) {
+  font-weight: bold;
+  justify-content: center;
+  display: grid;
+}
+.menu {
+  position: relative;
+}
+.ec {
+  display: grid;
+  justify-content: center;
+  margin: 80px 0 0 0;
+  font-size: 30px;
+  font-family: Courier;
+}
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background:#5097A4;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 480px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: white;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: white;
+}
+.slides > div:target {
+ /* transform: scale(1); */
+}
+.perpus{
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  border: 3px solid grey;
+}
+.slider > a {
+ background-color:white;
+  color:#5097A4;
+}
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+  color: white;
+}
+.slider > a:hover {
+  color:white;
+  background-color:#5097A4;
+}
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > a {
+    display: none;
+  }
+}
+
+.bung {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 0 0;
+  justify-content: center;
+  font-family: 'Ropa Sans', sans-serif;
+}
+.perpus {
+  border-radius: 5px;
+}
+.con-pic {
+  display: grid;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+.isi {
+  justify-content: center;
+  display: grid;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Courier;
+}
+.isi-twoo {
+  padding: 0 40px 0 40px;
+  display: grid;
+  justify-content: center;
+  font-size: 15px;
+  font-family: Courier;
+}
+
+.con-seven{
+  display: grid;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+.isi-tree {
+  justify-content: center;
+  display: grid;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Courier;
+}
+.isi-four{
+  display: grid;
+  justify-content: center;
+  font-size: 15px;
+  font-family: Courier;
+  border: 1px solid black;
+  width: 380px;
+}
+</style>
+</head>
+
+<body>
+<!--konten navbar dimulai-->
+<div class="container">
+  <div class="logo">
+<i class="fa-solid fa-bars fa-lg" style="color:#5097A4" class="ic"></i>
+  </div>
+<div class="hub">Hubungi Kami</div>
+  <div class="logo-right">
+<i class="fa-solid fa-book-open" style="color:#5097A4"></i>
+<div class="per">Perpus</div>
+  </div>
+  
+  </div>
+</div>
+<input type="checkbox" id="check">
+<div class="con-log">
+  <ul>
+    <li><a href="www.google">Klien</a></li>
+    <li>FaQ</li>
+    <li>Kontak</li>
+  </ul>
+</div>
+<!--konten navbar berakhir-->
+
+<!--container two-->
+<!--konten 2 dimulai-->
+<div class="con-two">
+  <div class="batu">
+  <div class="text-3xl ">Library Digital</div>
+</div>
+<div class="desk">
+  <div class="nat">
+ <img src="https://i.ibb.co.com/6Yv8fqt/images-35.jpg" class="log">
+ </div>
+</div>
+</div>
+
+<div class="floating">
+  <div class="menu"> 
+<img width="16" height="16" src="https://img.icons8.com/officel/16/000000/double-down.png" alt="double-down"/>
+  </div>
+</div>
+<!--konten 2 berakhir-->
+<div class="con-tree">
+<p>ePerpus adalah sebuah perpustakaan</p>
+<p>Yang berbasis digital.</p>
+<p>sEhingga memudahkan untuk semua orang,</p>
+<p>yang mempunyai keinginan</p>
+<p>untuk belajar^-^</p>
+</div>
+
+<div class="ec">
+  <div class="text-cyan-700 font-bold">
+    <h3>Kelebihan ePerpus</h3>
+  </div>
+</div>
+
+<div class="bung">
+  <div class="slider">
+  <a href="#slide-1">1</a>
+  <a href="#slide-2">2</a>
+  <a href="#slide-3">3</a>
+  <a href="#slide-4">4</a>
+  <a href="#slide-5">5</a>
+  <div class="slides">
+    <div id="slide-1">
+<img src="https://i.ibb.co.com/GcRRfnh/1-customlogo-1.png" class="perpus">
+    </div>
+    <div id="slide-2">
+<img src="https://i.ibb.co.com/GcRRfnh/1-customlogo-1.png" class="perpus">
+    </div>
+    <div id="slide-3">
+<img src="https://i.ibb.co.com/Q6htZjH/7-aman.png" class="perpus">
+    </div>
+    <div id="slide-4">
+<img src="https://i.ibb.co.com/F4YXYqF/6-ribuanbuku.png" class="perpus">
+    </div>
+    <div id="slide-5">
+<img src="https://i.ibb.co.com/JnPR5Hk/2-kemudahanakses-1.png" class="perpus">
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="text-cyan-700 font-bold">
+    <h3>Kelebihan Fitur</h3>
+  </div>
+</div>
+
+ <div class="con-img">
+   <div class="con-twoo">
+<img src="https://i.ibb.co.com/Srvwq6h/Homepage-Fitur1-1.png" class="gam">
+ </div>
+ 
+ <div class="con-pic">
+<div class="con-tree">
+<img src="https://i.ibb.co.com/ScvCMKz/Homepage-small1-1.png" class="dash">
+   </div>
+   <div class="isi">
+     Dashboard Analitik
+   </div>
+   <div class="isi-twoo">
+    Untuk reporting behaviour pembaca yang mudah & lengkap
+   </div>
+</div>
+
+<div class="con-pic">
+<div class="con-tree">
+  <img src="https://i.ibb.co.com/gvg9R7L/Homepage-small2-1.png" class="dash">
+   </div>
+   <div class="isi">
+     management konten
+   </div>
+</div>
+
+<div class="con-pic">
+<div class="con-tree">
+  <img src="https://i.ibb.co.com/k5bt5h1/Homepage-small3-1.png" class="dash">
+   </div>
+   <div class="isi">
+Tambahan Fitur Konten Internal
+   </div>
+</div>
+
+<div class="con-pic">
+<div class="con-tree">
+<img src="https://i.ibb.co.com/mtzVMqf/Homepage-small4-1.png" class="dash">
+   </div>
+   <div class="isi">
+Tambahan Fitur Sesuai Request
+   </div>
+</div>
+
+<div class="con-pic">
+<div class="con-tree">
+<img src="https://i.ibb.co.com/ZVxP3Tr/Homepage-small5.png" class="dash">
+   </div>
+   <div class="isi">
+Pinjam / Unduh Konten
+   </div>
+</div>
+
+<div class="ec">
+  <div class="text-cyan-700 font-bold">
+    <h3>Manfaat ePerpus</h3>
+  </div>
+</div>
+
+<div class="con-six">
+<img src="https://i.ibb.co.com/Z8K04sV/Homepage-Manfaat-aset-2.png class="dash">
+</div>
+
+<div class="con-seven">
+<div class="con-tree">
+<img src="https://i.ibb.co.com/6Fmm1cN/Homepage-1small.png" class="dash">
+   </div>
+   <div class="isi-four">
+Meningkatkan kualitas anggota institusi secara individu
+   </div>
+</div>
+
+<!--
+ <div class="fixed flex justify-between items-center w-full bg-cyan-700 bottom-0
+ px-4 py-2 shadow-inner z-10 nav-bottom">
+<div class="hov">
+  <div><span class="fa-solid fa-home border-lavender px-2 py-1 hover:bg-blue-200
+  rounded-lg shadow-xl home text-xl  white-bottom bg-black text-white"></span></div>
+</div>
+  <div><span class="fa-solid fa-bars-staggered border-lavender px-2 py-1 hover:bg-blue-200
+  rounded-lg shadow-xl bg-white project text-xl  white-bottom"></span></div>
+  
+   <a href="https://www.google.com/search?q=https%3A%2F%2Ffu17wc.pssi.org+php%3Fid%3D&oq=https%3A%2F%2Ffu17wc.pssi.org+php%3Fid%3D&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEINzEyOGowajSoAg6wAgE&client=ms-android-samsung-ss&sourceid=chrome-mobile&ie=UTF-8"><div><span class="fa-solid fa-address-card border-lavender px-2 py-1 rounded-lg hover:bg-blue-200
+  shadow-xl about bg-white text-xl white-bottom"></span></div></a>
+  
+  <div><span class="fa-solid fa-message border-lavender px-2 py-1 rounded-lg bg-white
+  shadow-xl message hover:bg-blue-200  text-xl white-bottom"></span></div>
+ </div>-->
+</body>
+  </html>
