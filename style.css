@@ -1,4 +1,3 @@
-
 .container {
    background-color: white;
    height: 50px;
@@ -8,16 +7,19 @@
   align-items: center;
   z-index: 2;
  }
+
  .logo {
    right: 10px;
    margin: auto;
    position: fixed;
    cursor: pointer;
  }
+
  .ic {
    height: 40px;
    width: 40px;
  }
+
  .logo-right {
    position: fixed;
    color: white;
@@ -28,11 +30,13 @@
    align-items: center;
    color:#5097A4;
  }
+
  .per {
    position: fixed;
    left: 40px;
    font-weight: bold;
  }
+
  .hub {
    position: fixed;
    right: 0;
@@ -43,10 +47,12 @@
    font-weight: bold;
    color: white;
  }
+
  .hub:hover {
    background-color: black;
    color: white;
  }
+
  #check {
    position: fixed;
    right: 0;
@@ -57,6 +63,7 @@
    top: 10px;
    opacity: 0;
  }
+
  li{
  position: relative;
  top:50px;
@@ -70,40 +77,46 @@ border-bottom: 0.1px solid black;
 background-color:#5097A4;
 z-index: 1;
  }
+
  #check:checked +
 .con-log {
 top: 5%;
 z-index: 3;
 position: relative;
 }
+
 .con-log {
   top: -100%;
   transition: 2s;
   position: fixed;
 }
+
 ul {
   position: fixed;
 }
+
 .desk {
   position: absolute;
   top: 55px;
   width: 100%;
   height: 430px;
- /* padding: 100px 100px 100px 100px;*/
   background-color:#5097A4;
   box-shadow: 2px 2px 2px grey;
   display: grid;
   justify-content: center;
 }
+
 .nat { 
   margin: 80px 0 0 0;
 }
+
 .con-two {
   display: flex;
   justify-content: center;
   font-family: zilla slab;
   color: white;
 }
+
 .batu {
   font-size: 20px:
   font-family: zilla slab;
@@ -111,11 +124,13 @@ ul {
   z-index: 1;
   position: relative;
 }
+
 .log{
   height: 300px;
   width: 300px;
   border-radius:5px;
 }
+
 .floating {  
     animation-name: floating;
     animation-duration: 1s;
@@ -133,6 +148,15 @@ ul {
     to   { transform: translate(0, -0px); }    
 }
 
+.vis {
+  display: flex;
+  justify-content: center;
+  margin: 80px;
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 15px:
+ }
+
 .con-tree{
   font-family: Courier;
   margin: 50px 0 0 0;
@@ -140,6 +164,7 @@ ul {
  display: grid;
  justify-content: center;
 }
+
 p:nth-child(2) {
   color:#5097A4;
  justify-content: center;
@@ -147,31 +172,37 @@ p:nth-child(2) {
  font-size: 20px;
  font-weight: bold;
 }
+
 p:nth-child(1) {
   display: grid;
   justify-content: center;
   font-weight: bold;
 }
+
 p:nth-child(3) {
   justify-content: center;
   display: grid;
   font-weight: bold;
   padding: 0 20px 0 20px;
 }
+
 p:nth-child(4) {
   font-weight: bold;
   justify-content: center;
   display: grid;
   color:#5097A4;
 }
+
 p:nth-child(5) {
   font-weight: bold;
   justify-content: center;
   display: grid;
 }
+
 .menu {
   position: relative;
 }
+
 .ec {
   display: grid;
   justify-content: center;
@@ -197,17 +228,21 @@ p:nth-child(5) {
   scroll-snap-type: mandatory;
   */
 }
+
 .slides::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 .slides::-webkit-scrollbar-thumb {
   background:#5097A4;
   border-radius: 10px;
 }
+
 .slides::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .slides > div {
   scroll-snap-align: start;
   flex-shrink: 0;
@@ -226,9 +261,11 @@ p:nth-child(5) {
   font-size: 100px;
   color: white;
 }
+
 .slides > div:target {
  /* transform: scale(1); */
 }
+
 .perpus{
   object-fit: cover;
   position: absolute;
@@ -251,21 +288,26 @@ p:nth-child(5) {
   position: relative;
   border: 3px solid grey;
 }
+
 .slider > a {
  background-color:white;
   color:#5097A4;
 }
+
 .slider > a:active {
   top: 1px;
 }
+
 .slider > a:focus {
   background: #000;
   color: white;
 }
+
 .slider > a:hover {
   color:white;
   background-color:#5097A4;
 }
+
 /* Don't need button navigation */
 @supports (scroll-snap-type) {
   .slider > a {
@@ -280,14 +322,17 @@ p:nth-child(5) {
   justify-content: center;
   font-family: 'Ropa Sans', sans-serif;
 }
+
 .perpus {
   border-radius: 5px;
 }
+
 .con-pic {
   display: grid;
   justify-content: center;
   margin: 20px 0 0 0;
 }
+
 .isi {
   justify-content: center;
   display: grid;
@@ -295,6 +340,7 @@ p:nth-child(5) {
   font-weight: bold;
   font-family: Courier;
 }
+
 .isi-twoo {
   padding: 0 40px 0 40px;
   display: grid;
@@ -308,6 +354,7 @@ p:nth-child(5) {
   justify-content: center;
   margin: 20px 0 0 0;
 }
+
 .isi-tree {
   justify-content: center;
   display: grid;
@@ -315,6 +362,7 @@ p:nth-child(5) {
   font-weight: bold;
   font-family: Courier;
 }
+
 .isi-four{
   display: grid;
   justify-content: center;
