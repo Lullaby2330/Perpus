@@ -1,2 +1,3 @@
 # Perpus
-Web tentang perpus sederhana
+Web perpus sederhana menggunakan html,css js
+dan framework tailwind
